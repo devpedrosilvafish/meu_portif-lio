@@ -7,12 +7,13 @@
     <title>Meu Portifólio - Pedro</title>
 
     <link rel="stylesheet" href="assets/style.css">
-    
+    <link rel="stylesheet" href="assets/responsive.css">
+
 </head>
 
 <body>
     <header>
-        <div class="container cab">
+        <div class="container_cab">
 
             <div class="cabecalho">
                 <div class="title">Meu Portifólio - Pedro</div>
@@ -21,13 +22,19 @@
                 <div class="menu">
                     <nav>
                         <ul>
-                            <li><a href="">Home</a></li>
+                            <li><a href="index.html">Home</a></li>
                             <li><a href="#sobre">Sobre</a></li>
                             <li><a href="#skills">Habilidades</a></li>
                             <li><a href="#projetos">Projetos</a></li>
                             <li><a href="#contatos">Contato</a></li>
                         </ul>
                     </nav>
+                </div>
+
+                <div class="menu_responsive">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
                 </div>
 
             </div>
@@ -51,35 +58,39 @@
             </section>
         </div>
 
-        <div class="container container2 " id="sobre">
-            <section class="sobre_mim" id="sobre_mim">
+            <div class="container container2 " id="sobre">
+                <section class="sobre_mim" id="sobre_mim">
 
-                <div class="title_sections">
-                    <h1>Sobre mim</h1>
-                </div>
-                <div class="conteudo">
-                    <p>Olá! Sou Pedro Silva, estudante de Engenharia de Software e sou apaixonado por
-                        criar coisas e por tecnologia.
-                        <br>
-                        Me interessei por programação no início de 2023 e, desde então, venho estudando e me
-                        aperfeiçoando por meio de cursos e projetos. Em agosto de 2023, iniciei minha graduação na
-                        área.
-                        <br>
-                        Tenho foco em desenvolvimento web, especialmente com HTML, CSS e JavaScript.
-                        <br>
-                        Em 2024 participei de um projeto de desenvolvimento de um sistema para uma empresa, atuando
-                        na
-                        área de Front-End com Vue.js e Tailwind CSS.
-                        <br>
-                        Hoje estou em busca da minha primeira oportunidade de estágio para aplicar meus
-                        conhecimentos e crescer profissionalmente.
-                    </p>
-                </div>
-            </section>
-        </div>
+                    <div class="title_sections">
+                        <h1>Sobre mim</h1>
+                    </div>
+                    <div class="conteudo">
+                        <p>Olá! Sou Pedro Silva, estudante de Engenharia de Software e sou apaixonado por
+                            criar coisas e por tecnologia.
+                            <br>
+                            Me interessei por programação no início de 2023 e, desde então, venho estudando e me
+                            aperfeiçoando por meio de cursos e projetos. Em agosto de 2023, iniciei minha graduação na
+                            área.
+                            <br>
+                            Tenho foco em desenvolvimento web, especialmente com HTML, CSS e JavaScript.
+                            <br>
+                            Em 2024 participei de um projeto de desenvolvimento de um sistema para uma empresa, atuando
+                            na
+                            área de Front-End com Vue.js e Tailwind CSS.
+                            <br>
+                            Hoje estou em busca da minha primeira oportunidade de estágio para aplicar meus
+                            conhecimentos e crescer profissionalmente.
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+        
+
+
 
         <div class="container " id="skills">
-            <section class="skills" >
+            <section class="skills">
 
                 <div class="title_sections">
                     <h1>Habilidades</h1>
@@ -125,8 +136,9 @@
             </section>
         </div>
 
+
         <div class="container container2" id="projetos">
-            <section class="projetos" >
+            <section class="projetos">
 
                 <div class="title_sections">
                     <h1>Projetos</h1>
@@ -145,10 +157,11 @@
                                 Projeto GTA
                             </div>
                         </div>
-                </div>
+                    </div>
 
             </section>
         </div>
+
 
         <div class="container" id="contatos">
             <section class="contatos">
@@ -206,13 +219,13 @@
                     <div class="forms">
 
                         <h2>Preencha o Formulario para eu estar entrando em contato com você:</h2>
-                    
+
                         <div class="area_forms">
                             <form action="#" method="post" class="forms_space">
 
                                 <label for="nome">
                                     <div>Nome:</div>
-                                    <input type="text" id="name" class="name" name="name" >
+                                    <input type="text" id="name" class="name" name="name">
                                     <div class="msg_error">*O nome é obrigatório!</div>
 
                                 </label>
@@ -225,7 +238,7 @@
 
                                 <label for="telefone">
                                     <div>Telefone:</div>
-                                    <input type="tel" id="tel" name="telefone" class="name" >
+                                    <input type="tel" id="tel" name="telefone" class="name">
                                     <div></div>
                                 </label>
 
@@ -264,4 +277,5 @@
 
 <script src="assets/script.js" defer></script>
 <script src="https://unpkg.com/scrollreveal"></script>
+
 </html>
