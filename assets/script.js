@@ -54,6 +54,19 @@ ScrollReveal().reveal('.contatos', {
     distance: '20%',
 });
 
+//responsive menu
+
+const menuResponsive = document.querySelector('.menu_responsive');
+
+function toggleMenu() {
+    const nav = document.querySelector('#nav');
+    nav.classList.toggle('active');
+
+}
+
+menuResponsive.addEventListener('click, toggleMenu');
+
+
 
 
 

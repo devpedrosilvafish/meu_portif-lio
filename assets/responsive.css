@@ -177,3 +177,52 @@ footer{
     }
 }
 
+@media (max-width: 800px) {
+    .lista_menu{
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        right: 0;
+        background: var(--blue-more-dark);
+        height: calc(100vh - 80px);
+        
+        
+    }
+
+    .menu_responsive{
+        display: block;
+        margin-right: 25px;
+        
+    
+    }
+
+     .title{
+        margin-left: 25px;
+        pad: 10px;
+        font-size: 1.5rem;
+        
+    }
+
+    .conteudo{
+        padding: 0 50px;
+    }
+
+    .forms h2{
+        padding: 50px;
+    }
+
+    #nav{
+        display: block;
+    }
+
+    #nav.active .lista_menu{
+        display: block;
+        flex-direction: column;
+        
+    }
+
+    
+
+   
+
+}
