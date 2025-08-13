@@ -56,15 +56,12 @@ ScrollReveal().reveal('.contatos', {
 
 //responsive menu
 
-const menuResponsive = document.querySelector('.menu_responsive');
+const hamburguer = document.querySelector('.hamburguer');
+const nav = document.querySelector('.nav');
 
-function toggleMenu() {
-    const nav = document.querySelector('#nav');
-    nav.classList.toggle('active');
+hamburguer.addEventListener("click", () =>
+    nav.classList.toggle("active"));
 
-}
-
-menuResponsive.addEventListener('click, toggleMenu');
 
 
 

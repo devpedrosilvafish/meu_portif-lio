@@ -11,6 +11,11 @@ body {
     background-color: var(--azul-mais-claro);
 }
 
+body a{
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
 
 
 /*Aqui criei uma uma memória utilizando root para armazenar as informações que vou usar com mais frequencia como as cores*/
@@ -28,85 +33,73 @@ body {
 
 /*Estilizando Cabeçalho*/
 
-header {
-    z-index: 1;
+header a{
+    text-decoration: none;
+    color: #f2f2f2;
 }
 
-.container_cab {
-    height: 80px;
-    background: var(--blue-more-dark);
-    width: 100%;
-    display: flex;
-    margin: auto;
-    position: fixed;
-    z-index: 1;
-
+.header {
+    background-color: var(--blue-more-dark);
+    padding-inline: 20px;/*equivale a left and right*/
 }
 
-.cabecalho {
+.nav{
+    max-width: 1000px;
+    height: 70px;
+    margin-inline: auto;
+
     display: flex;
-    color: var(--branco);
-    width: 900px;
-    margin: auto;
     justify-content: space-between;
-
+    align-items: center;
 }
 
-.title {
-    font-size: 22px;
-    font-weight: bold;
+.logo{
+    font-size: 1.3rem;
 }
 
-
-
-.menu ul {
+.nav_list{
     display: flex;
     gap: 30px;
-    list-style-type: none;
-    font-size: 1.1rem;
-
+    list-style: none;
 }
 
-a {
-    text-decoration: none;
-    color: var(--branco);
+.nav_list a{
+    font-size: 18px;
+    padding-block: 16px; /*equivale a top e bottom*/
 }
 
-/* header responsive*/
+/*iniciando estilização menu responsivo*/
 
-.menu_responsive {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.nav .hamburguer{
+    /*aqui vamos tirar a bordar e bg padrão e add a primeira linha que vai ficar no meio*/
     display: none;
-    
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
 }
 
-.line {
+/*para criar os outros dois traços usamos before e after*/
+
+.hamburguer::before,
+.hamburguer::after{
+    content: " ";
+    display: block;
     width: 30px;
-    height: 2px;
-    background: #f2f2f2;
-    margin-bottom: 7px;
-    cursor: pointer;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: .3s;
 
 }
 
-/*Criando um hover para quando eu passar o mouse por cima do elemento que eu quiser ele fazer alguma animação básica*/
 
-.menu a:hover {
-    color: var(--ponteiro);
-}
-
-.title:hover {
-    color: var(--ponteiro);
-    cursor: pointer;
-}
-
-/*Section home*/
+/*fim da estilização Cabeçalho*/
 
 .container {
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
     height: 100vh;
     display: flex;
     margin: auto;
@@ -410,14 +403,14 @@ label {
     color: var(--branco);
 }
 
-button {
+#submit_button {
     display: flex;
     margin: auto;
     padding: 8px;
     cursor: pointer;
 }
 
-button:hover {
+#submit_button:hover {
     background: #ccc;
     border: none;
 
