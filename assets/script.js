@@ -62,6 +62,19 @@ const nav = document.querySelector('.nav');
 hamburguer.addEventListener("click", () =>
     nav.classList.toggle("active"));
 
+//fazer aparecer barra no cards projecto com ver mais e nome do projeto.
+
+const conteudoGeral = document.querySelector('.conteudo_cards');
+const descricao = document.querySelector('.descricao_off')
+
+conteudoGeral.addEventListener("mouseenter", () => {
+    descricao.style.opacity = "1";
+    descricao.style.transform = 'translateY(0)'
+})
+
+conteudoGeral.addEventListener("mouseleave", () => {
+    descricao.style.opacity = "0";
+})
 
 
 
