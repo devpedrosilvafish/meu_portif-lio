@@ -64,7 +64,7 @@ hamburguer.addEventListener("click", () =>
 
 //fazer aparecer barra no cards projecto com ver mais e nome do projeto.
 
-const conteudoGeral = document.querySelector('.conteudo_cards');
+/*const conteudoGeral = document.querySelectorAll('.conteudo_cards');
 const descricao = document.querySelector('.descricao_off')
 
 conteudoGeral.addEventListener("mouseenter", () => {
@@ -73,8 +73,31 @@ conteudoGeral.addEventListener("mouseenter", () => {
 })
 
 conteudoGeral.addEventListener("mouseleave", () => {
-    descricao.style.opacity = "0";
-})
+    descricao.style.opacity = "0.5";
+     descricao.style.transform = 'translateY(-90px)'
+    
+});*/
+
+const conteudos = document.querySelectorAll('.conteudo_cards');
+
+conteudos.forEach(function(conteudo) {
+  // Seleciona a descrição dentro de cada card
+  const descricao = conteudo.querySelector('.descricao_off');
+
+  // Quando o mouse entrar no card
+  conteudo.addEventListener("mouseenter", function() {
+    descricao.style.opacity = "1";
+    descricao.style.transform = "translateY(0)";
+  });
+
+  // Quando o mouse sair do card
+  conteudo.addEventListener("mouseleave", function() {
+    descricao.style.opacity = "0.5";
+    descricao.style.transform = "translateY(-90px)";
+  });
+});
+
+
 
 
 
