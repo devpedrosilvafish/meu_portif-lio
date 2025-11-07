@@ -8,7 +8,7 @@
 
 body {
     color: var(--branco);
-    background-color: var(--azul-mais-claro);
+    background-color: var(--azul-mais-claro);overflow-x: hidden;
 }
 
 body a {
@@ -262,7 +262,7 @@ header a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 900px;
+    width: 100vw;
     text-align: center;
     gap: 100px;
 }
@@ -270,12 +270,16 @@ header a {
 #projetos {
     display: flex;
     justify-content: center;
+    width: 100vw;
 
 }
 
-
-.projetos h1{
-margin-bottom: 50px;
+.title_projects{
+    width: 100vw;
+}
+.projetos h1 {
+    margin-bottom: 50px;
+    
 }
 
 .area_cards_project {
@@ -367,6 +371,118 @@ margin-bottom: 50px;
     cursor: pointer;
 }
 
+/*area modal */
+
+.area_modal {
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 1s;
+
+
+}
+
+.modal{
+    background: #f8f9faf3;
+    width: 800px;
+    max-height: 900px;
+    border-radius: 5px;
+
+}
+
+.area_fechar{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.fechar{
+    display: inline-block;
+    color: var(--blue-more-dark);
+    width: 40px;
+    font-size: 40px;
+    margin-right: 20px;
+    transition: .2s;
+
+}
+
+.fechar:hover{
+    cursor: pointer;
+    color: red;
+}
+
+.area_modal_content{
+    display: flex;
+    padding: 20px
+}
+
+.area_modal_content img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    flex: 1;
+}
+
+.area_video_modal{
+    flex: 1;
+}
+
+
+
+
+.area_txt{
+    color: #0a0c0d;
+    flex: 1;
+    
+}
+
+.area_txt h2{
+    display: inline-block;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--blue-more-dark);
+}
+
+.area_txt p{
+    font-size: 14px;
+    text-align: justify;
+}
+
+
+
+.area_btn_modal{
+
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    
+}
+
+.btn_modal{
+    font-size: 10px;
+    background: var(--blue-more-dark);
+    padding: 5px 10px 5px 10px;
+    color: var(--branco);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn_modal:first-child{
+    margin-left: 20px;
+}
+
+.btn_modal:hover{
+    color: greenyellow;
+}
 
 
 
