@@ -382,12 +382,13 @@ header a {
     top: 0;
     left: 0;
 
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-
+    position: fixed;
     transition: 1s;
 
+    
 
 }
 
@@ -402,20 +403,22 @@ header a {
 .area_fechar{
     display: flex;
     justify-content: flex-end;
+    padding: 5px;
     
 }
 
-.fechar{
+.fechar_modal{
     display: inline-block;
     color: var(--blue-more-dark);
     width: 40px;
-    font-size: 40px;
+    font-size: 35px;
     margin-right: 20px;
     transition: .2s;
+    border: none;
 
 }
 
-.fechar:hover{
+.fechar_modal:hover{
     cursor: pointer;
     color: red;
 }

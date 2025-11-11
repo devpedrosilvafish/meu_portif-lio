@@ -97,10 +97,22 @@ conteudos.forEach(function(conteudo) {
   });
 });
 
+// MOdal
 
 
 
 
+const areaModal = document.querySelector('.area_modal');
+const fecharModal = document.querySelector('.fechar_modal');
+const btnsAbrir = document.querySelectorAll('.bt-ver');
+
+
+fecharModal.addEventListener('click', () => {areaModal.style.display = 'none';});
+btnsAbrir.forEach((botao => {
+    botao.addEventListener('click', () => {
+        areaModal.style.display = 'flex';
+    });
+}));
 
 
 
