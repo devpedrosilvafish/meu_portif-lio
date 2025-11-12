@@ -80,21 +80,21 @@ conteudoGeral.addEventListener("mouseleave", () => {
 
 const conteudos = document.querySelectorAll('.conteudo_cards');
 
-conteudos.forEach(function(conteudo) {
-  // Seleciona a descrição dentro de cada card
-  const descricao = conteudo.querySelector('.descricao_off');
+conteudos.forEach(function (conteudo) {
+    // Seleciona a descrição dentro de cada card
+    const descricao = conteudo.querySelector('.descricao_off');
 
-  // Quando o mouse entrar no card
-  conteudo.addEventListener("mouseenter", function() {
-    descricao.style.opacity = "1";
-    descricao.style.transform = "translateY(0)";
-  });
+    // Quando o mouse entrar no card
+    conteudo.addEventListener("mouseenter", function () {
+        descricao.style.opacity = "1";
+        descricao.style.transform = "translateY(0)";
+    });
 
-  // Quando o mouse sair do card
-  conteudo.addEventListener("mouseleave", function() {
-    descricao.style.opacity = "0.5";
-    descricao.style.transform = "translateY(-90px)";
-  });
+    // Quando o mouse sair do card
+    conteudo.addEventListener("mouseleave", function () {
+        descricao.style.opacity = "0.5";
+        descricao.style.transform = "translateY(-90px)";
+    });
 });
 
 // MOdal
@@ -106,13 +106,41 @@ const areaModal = document.querySelector('.area_modal');
 const fecharModal = document.querySelector('.fechar_modal');
 const btnsAbrir = document.querySelectorAll('.bt-ver');
 
+const titleModal = document.querySelector('.title_modal');
+const textModal = document.querySelector('.content_p');
 
-fecharModal.addEventListener('click', () => {areaModal.style.display = 'none';});
+const conteudoModal = {
+    1: {
+        titulo: "Meu Portifolio",
+        descricao: "Neste portfólio, você encontrará alguns dos meus principais projetos em HTML, CSS e JavaScript, criados com foco em design responsivo, interatividade e boas práticas de código. Cada trabalho reflete meu aprendizado contínuo e minha paixão por transformar ideias em interfaces funcionais e criativas."
+    },
+    2: {
+        titulo: "Projeto: Landing Page GTA",
+        descricao: "Este projeto é uma landing page inspirada no universo de GTA, criada para destacar o visual marcante e a identidade do jogo. Desenvolvida com HTML, CSS e JavaScript, a página conta com design responsivo, animações sutis e estrutura moderna, demonstrando minhas habilidades em front-end e atenção aos detalhes na experiência do usuário.."
+    },
+    3: {
+        titulo: "Projeto: Projeto Vida Music",
+        descricao: "Este site foi desenvolvido para o time de louvor da igreja Projeto Vida, com o objetivo de compartilhar músicas, eventos e mensagens inspiradoras. Construído com HTML, CSS e JavaScript, o projeto une design moderno, navegação intuitiva e valores cristãos, criando uma plataforma que reflete fé, arte e tecnologia em harmonia.."
+    }
+
+
+};
+
+
+
+
+fecharModal.addEventListener('click', () => { 
+    areaModal.style.display = 'none'; });
+    
 btnsAbrir.forEach((botao => {
     botao.addEventListener('click', () => {
         areaModal.style.display = 'flex';
     });
 }));
+
+//
+
+
 
 
 
