@@ -108,6 +108,7 @@ const btnsAbrir = document.querySelectorAll('.bt-ver');
 
 const titleModal = document.querySelector('.title_modal');
 const textModal = document.querySelector('.content_p');
+const imgModal = document.querySelector(".area_video_modal img");
 
 const conteudoModal = {
     1: {
@@ -116,11 +117,13 @@ const conteudoModal = {
     },
     2: {
         titulo: "Projeto: Landing Page GTA",
-        descricao: "Este projeto é uma landing page inspirada no universo de GTA, criada para destacar o visual marcante e a identidade do jogo. Desenvolvida com HTML, CSS e JavaScript, a página conta com design responsivo, animações sutis e estrutura moderna, demonstrando minhas habilidades em front-end e atenção aos detalhes na experiência do usuário.."
+        descricao: "Este projeto é uma landing page inspirada no universo de GTA, criada para destacar o visual marcante e a identidade do jogo. Desenvolvida com HTML, CSS e JavaScript, a página conta com design responsivo, animações sutis e estrutura moderna, demonstrando minhas habilidades em front-end e atenção aos detalhes na experiência do usuário..",
+        imagem: "images/projeto-gta.png"
     },
     3: {
         titulo: "Projeto: Projeto Vida Music",
-        descricao: "Este site foi desenvolvido para o time de louvor da igreja Projeto Vida, com o objetivo de compartilhar músicas, eventos e mensagens inspiradoras. Construído com HTML, CSS e JavaScript, o projeto une design moderno, navegação intuitiva e valores cristãos, criando uma plataforma que reflete fé, arte e tecnologia em harmonia.."
+        descricao: "Este site foi desenvolvido para o time de louvor da igreja Projeto Vida, com o objetivo de compartilhar músicas, eventos e mensagens inspiradoras. Construído com HTML, CSS e JavaScript, o projeto une design moderno, navegação intuitiva e valores cristãos, criando uma plataforma que reflete fé, arte e tecnologia em harmonia..",
+        imagem: "images/projeto-pvm.png"
     }
 
 
@@ -129,14 +132,21 @@ const conteudoModal = {
 
 
 
-fecharModal.addEventListener('click', () => { 
-    areaModal.style.display = 'none'; });
-    
-btnsAbrir.forEach((botao => {
-    botao.addEventListener('click', () => {
+fecharModal.addEventListener('click', () => {
+    areaModal.style.display = 'none';
+});
+
+btnsAbrir.forEach((botao) => {
+    botao.addEventListener('click', function () {
+        const id = this.closest(".conteudo_cards").getAttribute("data-id"); //this= esse botao que cliquei, parrent = eu cliquei o botao e vou pegar o card onde esta aquele botao.
+        const conteudoGeral = conteudoModal[id];
+
+        titleModal.textContent = conteudoGeral.titulo;
+        textModal.textContent = conteudoGeral.descricao;
+        imgModal.src = conteudoGeral.imagem;
         areaModal.style.display = 'flex';
     });
-}));
+});
 
 //
 
