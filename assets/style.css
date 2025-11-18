@@ -8,7 +8,8 @@
 
 body {
     color: var(--branco);
-    background-color: var(--azul-mais-claro);overflow-x: hidden;
+    background-color: var(--azul-mais-claro);
+    overflow-x: hidden;
 }
 
 body a {
@@ -274,12 +275,13 @@ header a {
 
 }
 
-.title_projects{
+.title_projects {
     width: 100vw;
 }
+
 .projetos h1 {
     margin-bottom: 50px;
-    
+
 }
 
 .area_cards_project {
@@ -388,11 +390,11 @@ header a {
     position: fixed;
     transition: 1s;
 
-    
+
 
 }
 
-.modal{
+.modal {
     background: #f8f9faf3;
     width: 800px;
     max-height: 900px;
@@ -400,15 +402,15 @@ header a {
 
 }
 
-.area_fechar{
+.area_fechar {
     display: flex;
     justify-content: flex-end;
     padding: 5px;
-   
-    
+
+
 }
 
-.fechar_modal{
+.fechar_modal {
     display: inline-block;
     color: var(--blue-more-dark);
     width: 40px;
@@ -420,12 +422,12 @@ header a {
 
 }
 
-.fechar_modal:hover{
+.fechar_modal:hover {
     cursor: pointer;
     color: red;
 }
 
-.area_modal_content{
+.area_modal_content {
     display: flex;
     padding: 20px
 }
@@ -437,41 +439,48 @@ header a {
     flex: 1;
 }
 
-.area_video_modal{
+.area_modal_content video {
+    width: 300px;
+    height: 200px;
+    flex: 1;
+
+}
+
+.area_video_modal {
     flex: 1;
 }
 
 
 
 
-.area_txt{
+.area_txt {
     color: #0a0c0d;
     flex: 1;
-    
+
 }
 
-.area_txt h2{
+.area_txt h2 {
     display: inline-block;
     margin-bottom: 15px;
     border-bottom: 1px solid var(--blue-more-dark);
 }
 
-.area_txt p{
+.area_txt p {
     font-size: 14px;
     text-align: justify;
 }
 
 
 
-.area_btn_modal{
+.area_btn_modal {
 
     display: flex;
     padding: 15px;
-    
-    
+
+
 }
 
-.btn_modal{
+.btn_modal {
     font-size: 10px;
     background: var(--blue-more-dark);
     padding: 5px 10px 5px 10px;
@@ -481,11 +490,11 @@ header a {
     cursor: pointer;
 }
 
-.btn_modal:first-child{
+.btn_modal:first-child {
     margin-left: 15px;
 }
 
-.btn_modal:hover{
+.btn_modal:hover {
     color: greenyellow;
 }
 

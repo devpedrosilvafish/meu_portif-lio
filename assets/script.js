@@ -108,23 +108,40 @@ const btnsAbrir = document.querySelectorAll('.bt-ver');
 
 const titleModal = document.querySelector('.title_modal');
 const textModal = document.querySelector('.content_p');
-const imgModal = document.querySelector(".area_video_modal img");
+const videoModal = document.querySelector(".video_modal");
+
+
+//posso usar tudo querySelector
+const repo = document.querySelector('#modalRepo');
+const site = document.getElementById('modalSite');
+const linkedin = document.getElementById('modalLinkedin');
 
 const conteudoModal = {
     1: {
         titulo: "Meu Portifolio",
-        descricao: "Neste portfólio, você encontrará alguns dos meus principais projetos em HTML, CSS e JavaScript, criados com foco em design responsivo, interatividade e boas práticas de código. Cada trabalho reflete meu aprendizado contínuo e minha paixão por transformar ideias em interfaces funcionais e criativas."
+        descricao: "Neste portfólio, você encontrará alguns dos meus principais projetos em HTML, CSS e JavaScript, criados com foco em design responsivo, interatividade e boas práticas de código. Cada trabalho reflete meu aprendizado contínuo e minha paixão por transformar ideias em interfaces funcionais e criativas.",
+        video: "videos/projeto-meu-portifolio.mp4",
+        repo: "https://github.com/devpedrosilvafish/meu_portif-lio",
+        site: "https://devpedrosilvafish.github.io/meu_portif-lio/",
+        linkedin: "https://www.linkedin.com/in/devpedrosilvasilvafish/"
+
     },
     2: {
         titulo: "Projeto: Landing Page GTA",
         descricao: "Este projeto é uma landing page inspirada no universo de GTA, criada para destacar o visual marcante e a identidade do jogo. Desenvolvida com HTML, CSS e JavaScript, a página conta com design responsivo, animações sutis e estrutura moderna, demonstrando minhas habilidades em front-end e atenção aos detalhes na experiência do usuário..",
-        imagem: "images/projeto-gta.png"
+        video: "videos/projeto-gta.mp4",
+        repo: "https://github.com/devpedrosilvafish/projeto-gta",
+        site: "https://devpedrosilvafish.github.io/projeto-gta/",
+        linkedin: "https://www.linkedin.com/in/devpedrosilvasilvafish/"
     },
     3: {
         titulo: "Projeto: Projeto Vida Music",
         descricao: "Este site foi desenvolvido para o time de louvor da igreja Projeto Vida, com o objetivo de compartilhar músicas, eventos e mensagens inspiradoras. Construído com HTML, CSS e JavaScript, o projeto une design moderno, navegação intuitiva e valores cristãos, criando uma plataforma que reflete fé, arte e tecnologia em harmonia..",
-        imagem: "images/projeto-pvm.png"
-    }
+        video: "videos/projeto-pvm.mp4",
+        repo: "https://github.com/devpedrosilvafish/projeto-pvm",
+        site: "https://devpedrosilvafish.github.io/projeto-pvm/",
+        linkedin: "https://www.linkedin.com/in/devpedrosilvasilvafish/"
+    },
 
 
 };
@@ -143,8 +160,14 @@ btnsAbrir.forEach((botao) => {
 
         titleModal.textContent = conteudoGeral.titulo;
         textModal.textContent = conteudoGeral.descricao;
-        imgModal.src = conteudoGeral.imagem;
+        videoModal.src = conteudoGeral.video;
         areaModal.style.display = 'flex';
+
+        repo.href = conteudoGeral.repo;
+        site.href = conteudoGeral.site;
+        linkedin.href = conteudoGeral.linkedin;
+
+
     });
 });
 
